@@ -1,5 +1,6 @@
 import { Button } from "@/components/ui/button";
 import { ArrowRight } from "lucide-react";
+import heroImage from "@assets/stock_images/modern_skyscrapers_b_470b5462.jpg";
 
 export function HeroSection() {
   const scrollToContact = () => {
@@ -11,11 +12,17 @@ export function HeroSection() {
 
   return (
     <section className="relative min-h-[80vh] flex items-center justify-center overflow-hidden pt-16 md:pt-20">
-      {/* Gradient Background */}
-      <div className="absolute inset-0 bg-gradient-to-br from-primary via-primary/95 to-primary/80" />
+      {/* Background Image */}
+      <div className="absolute inset-0">
+        <img
+          src={heroImage}
+          alt="ビジネス街の高層ビル群"
+          className="w-full h-full object-cover"
+        />
+      </div>
       
-      {/* Overlay for better text readability */}
-      <div className="absolute inset-0 bg-primary/40" />
+      {/* Gradient Overlay for better text readability */}
+      <div className="absolute inset-0 bg-gradient-to-br from-primary/90 via-primary/80 to-primary/70" />
 
       {/* Content */}
       <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 text-center">
