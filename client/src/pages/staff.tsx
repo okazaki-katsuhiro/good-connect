@@ -1,7 +1,9 @@
 import { Header } from "@/components/sections/header";
 import { Footer } from "@/components/sections/footer";
 import { Card, CardContent } from "@/components/ui/card";
-import { User, Target, Heart } from "lucide-react";
+import kotaniImage from "@assets/stock_images/professional_japanes_3f1cc7cb.jpg";
+import kidoImage from "@assets/stock_images/professional_japanes_01bc919a.jpg";
+import ogawaImage from "@assets/stock_images/professional_japanes_99fe4260.jpg";
 
 const staffMembers = [
   {
@@ -9,21 +11,21 @@ const staffMembers = [
     name: "小谷 陽一",
     position: "株式会社GOLVOYA 代表取締役",
     title: "「ビジネスの可能性を切り拓く」低コスト×高品質のテレアポ代行で企業の売上拡大を支援",
-    icon: User,
+    image: kotaniImage,
   },
   {
     id: "kido",
     name: "木戸 那名見",
     position: "株式会社GOLVOYA オペレーション管理責任者",
     title: "「成果につながる」テレアポ代行の秘訣とは？アポイント獲得率を高める仕組みと戦略",
-    icon: Target,
+    image: kidoImage,
   },
   {
     id: "ogawa",
     name: "小川",
     position: "GOLVOYA 架電スタッフ",
     title: "スタッフの働きやすさが成果を生み出す！テレアポ営業代行『グッドコネクト』が高アポ率を誇る理由とは？",
-    icon: Heart,
+    image: ogawaImage,
   },
 ];
 
@@ -56,11 +58,13 @@ export default function Staff() {
                 >
                   <CardContent className="p-8 md:p-12">
                     <div className="flex flex-col md:flex-row gap-8 items-start">
-                      {/* Icon */}
+                      {/* Photo */}
                       <div className="flex-shrink-0">
-                        <div className="w-20 h-20 md:w-24 md:h-24 rounded-full bg-orange/10 flex items-center justify-center">
-                          <staff.icon className="w-10 h-10 md:w-12 md:h-12 text-orange" />
-                        </div>
+                        <img
+                          src={staff.image}
+                          alt={staff.name}
+                          className="w-32 h-32 md:w-40 md:h-40 rounded-full object-cover border-4 border-orange/20"
+                        />
                       </div>
 
                       {/* Content */}

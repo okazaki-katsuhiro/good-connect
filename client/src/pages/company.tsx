@@ -2,6 +2,7 @@ import { Header } from "@/components/sections/header";
 import { Footer } from "@/components/sections/footer";
 import { Card, CardContent } from "@/components/ui/card";
 import { Building2, MapPin, Phone, Globe, User } from "lucide-react";
+import officeImage from "@assets/stock_images/modern_japanese_offi_60b97d4f.jpg";
 
 const companyInfo = [
   {
@@ -49,8 +50,29 @@ export default function Company() {
           </div>
         </section>
 
-        {/* Company Info Section */}
+        {/* Office Image Section */}
         <section className="py-16 md:py-24">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="relative h-96 rounded-lg overflow-hidden mb-16">
+              <img
+                src={officeImage}
+                alt="GOLVOYA オフィス"
+                className="w-full h-full object-cover"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-primary/80 to-transparent flex items-end">
+                <div className="p-8 text-white">
+                  <h2 className="text-3xl font-bold mb-2">株式会社GOLVOYA</h2>
+                  <p className="text-lg text-white/90">
+                    テレアポ代行・営業支援のプロフェッショナル集団
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* Company Info Section */}
+        <section className="pb-16 md:pb-24">
           <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
             <Card className="overflow-hidden">
               <CardContent className="p-8 md:p-12">

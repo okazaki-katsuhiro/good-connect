@@ -3,6 +3,10 @@ import { Footer } from "@/components/sections/footer";
 import { Card, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { TrendingUp, Building2, Calendar, Package } from "lucide-react";
+import sCompanyImage from "@assets/stock_images/business_people_hand_3af9cce1.jpg";
+import cCompanyImage from "@assets/stock_images/business_people_hand_89171b58.jpg";
+import bCompanyImage from "@assets/stock_images/business_people_hand_0b275456.jpg";
+import oCompanyImage from "@assets/stock_images/business_people_hand_ff2d176d.jpg";
 
 const testimonials = [
   {
@@ -14,6 +18,7 @@ const testimonials = [
     product: "店舗向け予約サービス",
     period: "2022年5月～",
     comment: "東京都23区へ地域を絞り、見込み客のアポ獲得を依頼しています。架電数での課金のため予算設定も行い易く助かっています。リスト準備をしてもらえるのはリソース不足の弊社に助かっています。初回ヒアリング時に補助金を利用したスキームの提案を行って貰いました。架電開始前に何度か打ち合わせをしていただき、安心でした。ありがとうございます。",
+    image: sCompanyImage,
   },
   {
     id: "c-company",
@@ -24,6 +29,7 @@ const testimonials = [
     product: "リフォーム業向けサービス",
     period: "2024年7月～",
     comment: "郵送物の送付先となる住所獲得＋提案のアポを依頼しました。新規取引先への資料請求を獲得して、その後資料送付先企業に対してアポ獲得まで一気通貫で行っていただきました。 何社か見積を取りましたが、1番リーズナブルな価格だったため契約をしました。スクリプトのクオリティーも大満足でした。月1回の打ち合わせで状況共有頂けるのも高評価です。",
+    image: cCompanyImage,
   },
   {
     id: "b-company",
@@ -34,6 +40,7 @@ const testimonials = [
     product: "ホテル業向けサービス",
     period: "2024年8月～",
     comment: "インバウンドが増えているエリアのホテル業に向けて、アウトソーシング(清掃業務)の提案を架電していただきました。アポの確度が高く、アポからの受注は50％を超えましたので費用対効果抜群でした。また架電している状況がリアルタイムで分かる部分が良いと思います。これからもホテル業の繁忙期を外して、利用させて頂きます。",
+    image: bCompanyImage,
   },
   {
     id: "o-company",
@@ -44,6 +51,7 @@ const testimonials = [
     product: "中小企業向け業務効率化ツール",
     period: "2024年9月～",
     comment: "ITリテラシーにばらつきのある中小企業への架電は難易度が高いと感じていましたが、トーク設計から丁寧に対応していただき、質の高いアポイントを安定して獲得できました。商談化率も高く、営業チームの動きが格段に効率化されました。日々の進捗も共有してもらえるので、安心して任せられる点も大きな魅力です。",
+    image: oCompanyImage,
   },
 ];
 
@@ -74,6 +82,16 @@ export default function Testimonials() {
                   className="overflow-hidden hover-elevate"
                   data-testid={`card-testimonial-${testimonial.id}`}
                 >
+                  {/* Image */}
+                  <div className="relative h-48 overflow-hidden">
+                    <img
+                      src={testimonial.image}
+                      alt={testimonial.company}
+                      className="w-full h-full object-cover"
+                    />
+                    <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
+                  </div>
+                  
                   <CardContent className="p-8">
                     {/* Company Name */}
                     <div className="mb-6">

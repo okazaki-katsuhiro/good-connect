@@ -2,47 +2,67 @@ import { Header } from "@/components/sections/header";
 import { Footer } from "@/components/sections/footer";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { FileText, ArrowRight } from "lucide-react";
+import column1 from "@assets/stock_images/business_sales_call__003513c6.jpg";
+import column2 from "@assets/stock_images/business_sales_call__1be3e42f.jpg";
+import column3 from "@assets/stock_images/business_sales_call__91193569.jpg";
+import column4 from "@assets/stock_images/business_strategy_ma_f11f790e.jpg";
+import column5 from "@assets/stock_images/business_strategy_ma_24e1c8c5.jpg";
+import column6 from "@assets/stock_images/business_strategy_ma_6247658c.jpg";
+import column7 from "@assets/stock_images/business_team_meetin_cf6917e3.jpg";
+import column8 from "@assets/stock_images/business_team_meetin_fd9b6cc9.jpg";
+import column9 from "@assets/stock_images/business_team_meetin_a451927c.jpg";
+import column10 from "@assets/stock_images/business_team_meetin_5df3d52e.jpg";
 
 const columns = [
   {
     id: 1,
     title: "【営業】インサイドセールスとは？代行の必要性やテレアポの重要性について",
+    image: column1,
   },
   {
     id: 2,
     title: "インサイドセールス代行の料金相場は？代行での成功戦略と活用ポイント",
+    image: column2,
   },
   {
     id: 3,
     title: "インサイドセールス代行を比較する前にチェック！代行サービスの選び方",
+    image: column3,
   },
   {
     id: 4,
     title: "インサイドセールス代行における成果報酬型の特徴やメリット・選び方を解説",
+    image: column4,
   },
   {
     id: 5,
     title: "【インサイドセールス代行】安い業者を探すコツは？代行効果を最大化する方法",
+    image: column5,
   },
   {
     id: 6,
     title: "テレアポ代行とは？メリット・デメリットと注意点への対策を解説",
+    image: column6,
   },
   {
     id: 7,
     title: "テレアポ代行を導入！営業成果を上げる業者の選び方と活用のコツ",
+    image: column7,
   },
   {
     id: 8,
     title: "テレアポ代行の料金体系は？テレアポ代行別のサービス詳細や料金相場",
+    image: column8,
   },
   {
     id: 9,
     title: "テレアポ代行サービスの特徴は？導入のメリット・業者選び・導入の流れ",
+    image: column9,
   },
   {
     id: 10,
     title: "テレアポ代行業者の選び方と失敗しないポイントを解説",
+    image: column10,
   },
 ];
 
@@ -91,20 +111,26 @@ export default function Column() {
                   className="overflow-hidden hover-elevate cursor-pointer group"
                   data-testid={`card-column-${column.id}`}
                 >
-                  <CardHeader className="pb-4">
-                    <div className="flex items-start gap-3">
-                      <div className="flex-shrink-0 w-10 h-10 rounded-full bg-orange/10 flex items-center justify-center">
-                        <FileText className="w-5 h-5 text-orange" />
-                      </div>
-                      <div className="flex-1 min-w-0">
-                        <div className="text-sm text-muted-foreground mb-2">
-                          {column.id}.
-                        </div>
-                        <CardTitle className="text-lg leading-tight group-hover:text-orange transition-colors">
-                          {column.title}
-                        </CardTitle>
+                  {/* Image */}
+                  <div className="relative h-48 overflow-hidden">
+                    <img
+                      src={column.image}
+                      alt={column.title}
+                      className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+                    />
+                    <div className="absolute top-3 left-3">
+                      <div className="w-8 h-8 rounded-full bg-orange/90 flex items-center justify-center">
+                        <span className="text-sm font-bold text-white">
+                          {column.id}
+                        </span>
                       </div>
                     </div>
+                  </div>
+                  
+                  <CardHeader className="pb-4">
+                    <CardTitle className="text-lg leading-tight group-hover:text-orange transition-colors">
+                      {column.title}
+                    </CardTitle>
                   </CardHeader>
                   <CardContent className="pt-0">
                     <div className="flex items-center text-orange font-medium text-sm">
