@@ -1,4 +1,5 @@
 import footerBg from "@assets/stock_images/modern_office_buildi_9a422421.jpg";
+import { Link } from "wouter";
 
 export function Footer() {
   return (
@@ -15,7 +16,7 @@ export function Footer() {
 
       {/* Content */}
       <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-8">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-8">
           <div>
             <h3 className="text-2xl font-bold mb-4">GOOD CONNECT</h3>
             <p className="text-white/80 leading-relaxed">
@@ -24,6 +25,38 @@ export function Footer() {
               成果につながる伴走型支援を提供します
             </p>
           </div>
+          
+          <div>
+            <h4 className="text-lg font-semibold mb-4">ページリンク</h4>
+            <nav className="space-y-2">
+              <Link href="/" data-testid="footer-link-home">
+                <span className="block text-white/80 hover:text-orange transition-colors cursor-pointer">
+                  ホーム
+                </span>
+              </Link>
+              <Link href="/staff" data-testid="footer-link-staff">
+                <span className="block text-white/80 hover:text-orange transition-colors cursor-pointer">
+                  スタッフ紹介
+                </span>
+              </Link>
+              <Link href="/testimonials" data-testid="footer-link-testimonials">
+                <span className="block text-white/80 hover:text-orange transition-colors cursor-pointer">
+                  お客様の声
+                </span>
+              </Link>
+              <Link href="/column" data-testid="footer-link-column">
+                <span className="block text-white/80 hover:text-orange transition-colors cursor-pointer">
+                  コラム
+                </span>
+              </Link>
+              <Link href="/company" data-testid="footer-link-company">
+                <span className="block text-white/80 hover:text-orange transition-colors cursor-pointer">
+                  会社概要
+                </span>
+              </Link>
+            </nav>
+          </div>
+
           <div>
             <h4 className="text-lg font-semibold mb-4">会社情報</h4>
             <div className="space-y-2 text-white/80">
