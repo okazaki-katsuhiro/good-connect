@@ -1,4 +1,4 @@
-import footerBg from "@assets/stock_images/dark_city_skyline_bu_565e70b9.jpg";
+import footerBg from "@assets/stock_images/modern_office_buildi_9a422421.jpg";
 
 export function Footer() {
   return (
@@ -8,9 +8,9 @@ export function Footer() {
         <img
           src={footerBg}
           alt="City skyline"
-          className="w-full h-full object-cover opacity-20"
+          className="w-full h-full object-cover opacity-50"
         />
-        <div className="absolute inset-0 bg-gradient-to-t from-primary via-primary/95 to-primary/90" />
+        <div className="absolute inset-0 bg-gradient-to-t from-primary/90 via-primary/85 to-primary/80" />
       </div>
 
       {/* Content */}
