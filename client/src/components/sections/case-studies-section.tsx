@@ -30,49 +30,49 @@ const caseStudies = [
 
 export function CaseStudiesSection() {
   return (
-    <section id="cases" className="py-16 md:py-24 bg-muted/30">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="text-center mb-12 md:mb-16">
-          <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-foreground mb-6">
+    <section id="cases" className="py-20 md:py-32 bg-muted/50">
+      <div className="max-w-7xl mx-auto px-6 sm:px-8 lg:px-12">
+        <div className="text-center mb-16 md:mb-20">
+          <h2 className="text-3xl sm:text-4xl md:text-5xl font-semibold text-foreground mb-6 tracking-tight">
             導入実績・成果事例
           </h2>
-          <p className="text-lg md:text-xl text-muted-foreground max-w-3xl mx-auto">
+          <p className="text-base md:text-lg text-muted-foreground max-w-3xl mx-auto">
             様々な業界のお客様に成果を提供しています
           </p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 md:gap-12">
           {caseStudies.map((study, index) => (
             <Card
               key={index}
-              className="p-6 md:p-8 hover:shadow-xl transition-all duration-300 border-card-border"
+              className="p-8 md:p-10 hover:shadow-md transition-all duration-200 border-card-border"
               data-testid={`card-case-${index}`}
             >
               <div className="flex flex-col h-full">
-                <div className="w-16 h-16 rounded-full bg-orange/10 flex items-center justify-center mb-6">
-                  <study.icon className="w-8 h-8 text-orange" />
+                <div className="w-14 h-14 rounded-full bg-orange/10 flex items-center justify-center mb-6">
+                  <study.icon className="w-7 h-7 text-orange" strokeWidth={1.5} />
                 </div>
                 
-                <div className="mb-4">
-                  <div className="flex items-center gap-3 mb-2">
-                    <h3 className="text-2xl font-bold text-foreground">
+                <div className="mb-6">
+                  <div className="flex items-center gap-3 mb-3">
+                    <h3 className="text-xl font-semibold text-foreground">
                       {study.company}
                     </h3>
-                    <span className="text-sm text-muted-foreground">
+                    <span className="text-xs text-muted-foreground">
                       {study.industry}
                     </span>
                   </div>
-                  <div className="text-3xl font-bold text-orange mb-4">
+                  <div className="text-2xl font-semibold text-orange mb-4">
                     {study.result}
                   </div>
                 </div>
 
-                <p className="text-foreground mb-4 leading-relaxed flex-grow">
+                <p className="text-sm text-foreground mb-6 leading-relaxed flex-grow">
                   {study.description}
                 </p>
 
                 <div className="pt-4 border-t border-border">
-                  <p className="text-sm text-muted-foreground font-mono">
+                  <p className="text-xs text-muted-foreground font-mono">
                     {study.metrics}
                   </p>
                 </div>

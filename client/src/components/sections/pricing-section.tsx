@@ -39,34 +39,34 @@ export function PricingSection() {
   };
 
   return (
-    <section id="pricing" className="py-16 md:py-24 bg-background">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="text-center mb-12 md:mb-16">
-          <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-foreground mb-6">
+    <section id="pricing" className="py-20 md:py-32 bg-background">
+      <div className="max-w-7xl mx-auto px-6 sm:px-8 lg:px-12">
+        <div className="text-center mb-16 md:mb-20">
+          <h2 className="text-3xl sm:text-4xl md:text-5xl font-semibold text-foreground mb-6 tracking-tight">
             料金プラン
           </h2>
-          <p className="text-lg md:text-xl text-muted-foreground">
+          <p className="text-base md:text-lg text-muted-foreground">
             明瞭でわかりやすい料金体系
           </p>
         </div>
 
         <div className="max-w-5xl mx-auto">
           {/* Main Pricing */}
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-12">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-16">
             {pricingDetails.map((item, index) => (
               <Card
                 key={index}
-                className="p-6 md:p-8 text-center border-card-border hover:shadow-lg transition-shadow"
+                className="p-8 md:p-10 text-center border-card-border hover:shadow-md transition-shadow duration-200"
                 data-testid={`card-pricing-${index}`}
               >
-                <h3 className="text-lg font-semibold text-muted-foreground mb-4">
+                <h3 className="text-base font-medium text-muted-foreground mb-6">
                   {item.label}
                 </h3>
-                <div className="mb-3">
-                  <span className="text-4xl md:text-5xl font-bold text-orange font-mono">
+                <div className="mb-4">
+                  <span className="text-4xl md:text-5xl font-semibold text-orange font-mono">
                     {item.price}
                   </span>
-                  <span className="text-lg text-muted-foreground ml-2">
+                  <span className="text-base text-muted-foreground ml-2">
                     {item.unit}
                   </span>
                 </div>
@@ -78,22 +78,22 @@ export function PricingSection() {
           </div>
 
           {/* Options */}
-          <Card className="p-6 md:p-8 border-card-border">
-            <h3 className="text-2xl font-bold text-foreground mb-6">
+          <Card className="p-8 md:p-10 border-card-border">
+            <h3 className="text-xl font-semibold text-foreground mb-8">
               オプションサービス
             </h3>
-            <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-8">
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 mb-10">
               {options.map((option, index) => (
                 <div
                   key={index}
                   className="flex items-center gap-3"
                   data-testid={`option-${index}`}
                 >
-                  <div className="w-6 h-6 rounded-full bg-orange/10 flex items-center justify-center flex-shrink-0">
-                    <Check className="w-4 h-4 text-orange" />
+                  <div className="w-5 h-5 rounded-full bg-orange/10 flex items-center justify-center flex-shrink-0">
+                    <Check className="w-3 h-3 text-orange" strokeWidth={2} />
                   </div>
                   <div className="flex items-center justify-between flex-1">
-                    <span className="text-foreground font-medium">
+                    <span className="text-foreground text-sm font-medium">
                       {option.label}
                     </span>
                     <span className="text-muted-foreground font-mono text-sm">
@@ -104,11 +104,11 @@ export function PricingSection() {
               ))}
             </div>
 
-            <div className="text-center pt-6 border-t border-border">
+            <div className="text-center pt-8 border-t border-border">
               <Button
                 onClick={scrollToContact}
                 size="lg"
-                className="bg-orange text-white"
+                className="bg-orange text-white px-10 py-4"
                 data-testid="button-pricing-contact"
               >
                 まずはお見積もり相談

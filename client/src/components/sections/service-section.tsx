@@ -26,13 +26,13 @@ const services = [
 
 export function ServiceSection() {
   return (
-    <section id="service" className="py-16 md:py-24 bg-muted/30">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="text-center mb-12 md:mb-16">
-          <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-foreground mb-6">
+    <section id="service" className="py-20 md:py-32 bg-muted/50">
+      <div className="max-w-7xl mx-auto px-6 sm:px-8 lg:px-12">
+        <div className="text-center mb-16 md:mb-20">
+          <h2 className="text-3xl sm:text-4xl md:text-5xl font-semibold text-foreground mb-8 tracking-tight">
             テレアポ代行サービスとは
           </h2>
-          <p className="text-lg md:text-xl text-muted-foreground max-w-4xl mx-auto leading-relaxed">
+          <p className="text-base md:text-lg text-muted-foreground max-w-3xl mx-auto leading-relaxed">
             グッドコネクトは、単なるアポイント獲得代行ではなく、
             <br className="hidden sm:block" />
             クライアント企業の営業活動を"伴走型"で支援するサービスです。
@@ -41,21 +41,21 @@ export function ServiceSection() {
           </p>
         </div>
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 md:gap-8">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 md:gap-12">
           {services.map((service, index) => (
             <Card
               key={index}
-              className="p-6 md:p-8 hover:shadow-lg transition-all duration-300 hover:-translate-y-1 border-card-border"
+              className="p-8 md:p-10 hover:shadow-md transition-all duration-200 border-card-border"
               data-testid={`card-service-${index}`}
             >
               <div className="flex flex-col items-center text-center">
-                <div className="w-16 h-16 md:w-20 md:h-20 rounded-full bg-orange/10 flex items-center justify-center mb-4 md:mb-6">
-                  <service.icon className="w-8 h-8 md:w-10 md:h-10 text-orange" />
+                <div className="w-14 h-14 md:w-16 md:h-16 rounded-full bg-orange/10 flex items-center justify-center mb-6">
+                  <service.icon className="w-7 h-7 md:w-8 md:h-8 text-orange" strokeWidth={1.5} />
                 </div>
-                <h3 className="text-xl md:text-2xl font-bold text-foreground mb-3">
+                <h3 className="text-lg md:text-xl font-semibold text-foreground mb-4">
                   {service.title}
                 </h3>
-                <p className="text-muted-foreground leading-relaxed">
+                <p className="text-sm md:text-base text-muted-foreground leading-relaxed">
                   {service.description}
                 </p>
               </div>

@@ -57,16 +57,16 @@ export function ContactSection() {
 
   if (isSubmitted) {
     return (
-      <section id="contact" className="py-16 md:py-24 bg-primary">
-        <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
-          <Card className="p-8 md:p-12 text-center">
-            <div className="w-20 h-20 rounded-full bg-orange/10 flex items-center justify-center mx-auto mb-6">
-              <CheckCircle2 className="w-10 h-10 text-orange" />
+      <section id="contact" className="py-20 md:py-32 bg-primary">
+        <div className="max-w-3xl mx-auto px-6 sm:px-8 lg:px-12">
+          <Card className="p-8 md:p-10 text-center shadow-lg">
+            <div className="w-16 h-16 rounded-full bg-orange/10 flex items-center justify-center mx-auto mb-6">
+              <CheckCircle2 className="w-8 h-8 text-orange" />
             </div>
-            <h3 className="text-2xl md:text-3xl font-bold text-foreground mb-4">
+            <h3 className="text-2xl md:text-3xl font-semibold text-foreground mb-6">
               送信完了しました
             </h3>
-            <p className="text-muted-foreground mb-8">
+            <p className="text-base text-muted-foreground mb-8 leading-relaxed">
               お問い合わせありがとうございます。
               <br />
               担当者より2営業日以内にご連絡させていただきます。
@@ -85,20 +85,20 @@ export function ContactSection() {
   }
 
   return (
-    <section id="contact" className="py-16 md:py-24 bg-primary">
-      <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="text-center mb-12">
-          <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-white mb-6">
+    <section id="contact" className="py-20 md:py-32 bg-primary">
+      <div className="max-w-3xl mx-auto px-6 sm:px-8 lg:px-12">
+        <div className="text-center mb-16">
+          <h2 className="text-3xl sm:text-4xl md:text-5xl font-semibold text-white mb-6 tracking-tight">
             お問い合わせ
           </h2>
-          <p className="text-lg md:text-xl text-white/90">
+          <p className="text-base md:text-lg text-white/90">
             まずはお気軽にご相談ください
           </p>
         </div>
 
-        <Card className="p-6 md:p-8 shadow-2xl">
+        <Card className="p-8 md:p-10 shadow-lg">
           <Form {...form}>
-            <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-6">
+            <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-8">
               <FormField
                 control={form.control}
                 name="companyName"

@@ -1,187 +1,217 @@
 # GOOD CONNECT Website Design Guidelines
 
 ## Design Approach
-**Reference-Based Approach**: Inspired by https://client.kakutoku.jp/ for section structure, spacing rhythm, and button treatments, while maintaining original GOOD CONNECT brand identity focused on trust, speed, and results.
+**GOLVOYA Brand Alignment**: Following the clean, minimal, and sophisticated design philosophy of https://golvoya.com/ - emphasizing whitespace, readability, and subtle elegance while maintaining GOOD CONNECT's service-focused identity.
 
 ## Core Design Principles
-- **Trust & Professionalism**: Clean layouts, structured information hierarchy
-- **Speed & Action**: Clear CTAs, smooth interactions, minimal friction
-- **Results-Driven**: Data visualization, concrete metrics, evidence-based design
+- **Simplicity & Clarity**: Clean layouts with generous whitespace, minimal visual noise
+- **Professional Elegance**: Sophisticated without being flashy, trustworthy and approachable
+- **Content-First**: Typography and information hierarchy take center stage
+- **Subtle Interactions**: Gentle animations, soft transitions, refined hover states
 
 ## Color Palette
 
 ### Primary Colors
-- **Navy**: 221 84% 16% (Main brand color - #0B214A)
-- **Orange**: 27 100% 50% (Accent/CTA - #FF7A00)
+- **Deep Navy**: 220 40% 20% (Primary text and headings - #1a2942)
+- **Soft Navy**: 220 30% 30% (Secondary elements - #2d3e57)
+- **Warm Orange**: 27 85% 55% (Accent/CTA - #F28C3D) - Used sparingly for important CTAs only
 
 ### Neutrals & Backgrounds
-- **White**: 0 0% 100% (Primary background)
-- **Light Gray**: 0 0% 96% (Section dividers/alternating backgrounds)
-- **Dark Gray**: 0 0% 20% (Body text)
-- **Medium Gray**: 0 0% 60% (Secondary text)
+- **Pure White**: 0 0% 100% (Primary background)
+- **Off White**: 0 0% 98% (Subtle section dividers)
+- **Light Gray**: 0 0% 96% (Card backgrounds, alternating sections)
+- **Medium Gray**: 220 10% 50% (Secondary text)
+- **Dark Gray**: 220 15% 25% (Body text)
 
 ### Usage Strategy
-- Navy: Headers, navigation, footer, primary structural elements
-- Orange: CTA buttons, key metrics, important highlights
-- Alternating white/light gray backgrounds between sections for visual rhythm
-- High contrast for Japanese text readability
+- White: Primary background, maximum whitespace
+- Deep Navy: Headings, primary text, navigation
+- Soft Navy: Subheadings, icons, borders
+- Warm Orange: CTA buttons ONLY - used as accent, not overwhelming
+- Light Gray: Subtle section backgrounds (alternating)
+- Generous spacing between all elements
 
 ## Typography
 
 ### Font Families
-- **Primary**: Noto Sans JP (Japanese content, UI elements)
-- **Secondary**: Inter (numbers, metrics, Latin text)
+- **Primary**: Noto Sans JP (Japanese content, all UI)
+- **Secondary**: Inter (Numbers, metrics, Latin text)
 
-### Type Scale
-- **Hero Headline**: 3xl to 5xl (48-60px desktop, 32-40px mobile), bold
-- **Section Headers**: 2xl to 3xl (32-40px desktop, 24-28px mobile), bold
-- **Subheadings**: xl to 2xl, semibold
-- **Body Text**: base to lg (16-18px), regular weight
-- **Small Text**: sm (14px) for captions, fine print
+### Type Scale (Refined)
+- **Hero Headline**: 3xl to 5xl (44-56px desktop, 32-36px mobile), bold, letter-spacing: -0.02em
+- **Section Headers**: xl to 3xl (28-36px desktop, 22-26px mobile), semibold
+- **Subheadings**: lg to xl (18-24px), medium weight
+- **Body Text**: base (16px), regular weight, leading-relaxed
+- **Small Text**: sm (14px) for captions
 
-### Line Height
-- Headlines: 1.2
-- Body text: 1.7 (optimal for Japanese characters)
-- Tight spacing for numbers/metrics: 1.1
+### Line Height & Spacing
+- Headlines: 1.3
+- Body text: 1.8 (generous for readability)
+- Paragraph spacing: mb-6 to mb-8
+- Letter spacing: Slightly tighter for headlines (-0.02em)
 
 ## Layout System
 
-### Spacing Primitives
-**Consistent Tailwind Units**: 4, 8, 12, 16, 20, 24, 32
-- Component padding: p-8 to p-12
-- Section padding: py-16 to py-24 (desktop), py-12 to py-16 (mobile)
-- Card gaps: gap-8 to gap-12
-- Element margins: mb-4, mb-8, mb-12
+### Spacing Primitives (Generous)
+**Increased Whitespace**: 8, 12, 16, 24, 32, 40, 48, 64
+- Component padding: p-8 to p-16
+- Section padding: py-20 to py-32 (desktop), py-16 to py-20 (mobile)
+- Card gaps: gap-12 to gap-16
+- Element margins: mb-8, mb-12, mb-16
+- Container spacing: Wider gutters (px-6 to px-12)
 
 ### Container Strategy
 - **Max Width**: max-w-7xl for main content
-- **Narrow Content**: max-w-4xl for text-heavy sections
-- **Full Width Sections**: w-full with inner max-w-7xl container
+- **Narrow Content**: max-w-3xl for text-heavy sections (tighter for better readability)
+- **Full Width Sections**: w-full with generous padding
 - **Grid Systems**: 
-  - 4 columns for service features (lg:grid-cols-4 md:grid-cols-2)
-  - 2-3 columns for case studies (lg:grid-cols-3 md:grid-cols-2)
-  - 8 cards in 2-4 column grid for strengths (lg:grid-cols-4 md:grid-cols-2)
+  - 3-4 columns maximum (avoid crowding)
+  - Generous gap-12 to gap-16 between grid items
+  - Single column on mobile with ample spacing
 
 ## Component Library
 
 ### Navigation
-- Fixed header with company logo (left), navigation menu (right)
-- Mobile: Hamburger menu with slide-in drawer
-- Background: White with subtle shadow on scroll
-- CTA button in header: Orange background with white text
+- Minimal fixed header, white background
+- Subtle shadow only on scroll (shadow-sm)
+- Logo: Left, simple wordmark
+- Menu: Right-aligned, clean text links (no underlines)
+- CTA button: Soft orange, rounded-lg, subtle hover effect
+- Mobile: Simple slide-in menu, white background
 
 ### Buttons
-- **Primary CTA**: Orange background, white text, rounded-lg (px-8 py-4)
-- **Secondary**: Navy outline, navy text, rounded-lg
-- **Hover Effects**: Color inversion + subtle scale (scale-105)
-- **Mobile**: Full width on small screens for primary CTAs
+- **Primary CTA**: Warm orange (#F28C3D), white text, rounded-lg, px-8 py-3.5
+- **Secondary**: White background, dark gray text, border-2, rounded-lg
+- **Hover Effects**: Subtle brightness adjustment (no scale), opacity: 0.9
+- **Spacing**: Generous padding, comfortable click targets
+- **Typography**: Medium weight, 16px
 
 ### Cards
-- White background with subtle shadow (shadow-md)
-- Hover: Lift effect (shadow-lg + -translate-y-1)
-- Padding: p-6 to p-8
+- White background, very subtle shadow (shadow-sm)
+- Hover: Minimal shadow increase (shadow-md)
+- Padding: p-8 to p-12 (generous internal spacing)
 - Border radius: rounded-xl
-- Icons: Top or left-aligned with 40-48px size
+- Border: 1px solid with very light gray (optional)
+- Icons: 40px size, soft colors
 
 ### Forms
-- Input fields: Border-gray-300, focus:border-orange, rounded-md
-- Labels: Above inputs, semibold, mb-2
-- Field spacing: mb-6
-- Submit button: Full-width orange CTA on mobile
+- Input fields: border-gray-200, focus:border-navy, rounded-md, py-3 px-4
+- Labels: Above inputs, medium weight, mb-2, dark gray
+- Field spacing: mb-8 (generous)
+- Submit button: Orange CTA, full-width on mobile
+- Minimal styling, maximum clarity
 
-### FAQ Accordion
-- Border between items
-- Question: Semibold, navy text, flex with chevron icon
-- Answer: Slide-down animation, gray text, pl-4 border-l-2 border-orange
-- Hover: Background highlight (bg-gray-50)
+### Accordions (FAQ)
+- Clean, borderless design
+- Question: Semibold, navy text, flex with simple chevron
+- Answer: Smooth slide-down, gray text, pl-6 with subtle left border
+- Hover: Very subtle background (bg-gray-50)
+- Spacing: py-6 between items
 
 ## Section-Specific Design
 
-### Hero Section (80vh)
-- **Background**: Navy gradient (from top-left navy to deeper navy) OR professional office/business photo with navy overlay
-- **Content**: Center-aligned
-- **Main Copy**: White text, 4xl-5xl, bold, animate fade-in-up
-- **Sub Copy**: White/light gray, xl, regular
-- **CTA**: Large orange button (px-10 py-5) with arrow icon, smooth scroll to form
+### Hero Section (70vh - More compact)
+- **Background**: White OR soft image with minimal overlay (20-30% opacity)
+- **Content**: Center-aligned, maximum whitespace
+- **Main Copy**: Deep navy text, 3xl-5xl, bold, minimal animation
+- **Sub Copy**: Medium gray, xl, regular weight
+- **CTA**: Orange button (warm tone), px-10 py-4, soft hover
+- **Spacing**: Generous mb-8 to mb-12 between elements
 
 ### Service Introduction
-- Light gray background
-- 4-column icon cards (mobile: stacked)
-- Icons: Orange stroke, 48px size
-- Card text: Navy headings, gray descriptions
+- White or off-white background
+- 3-4 column layout (avoid crowding)
+- Icons: Minimal line icons, soft navy color, 48px
+- Card style: Borderless or subtle border, generous padding
+- Text: Navy headings, medium gray descriptions
+- Spacing: Large gaps between cards (gap-12)
 
-### 8 Strengths Section
+### Strengths Section
 - White background
-- Section header: Center-aligned, navy, with orange underline accent
-- 8 cards in responsive grid (4→2→1 columns)
-- Each card: Number badge (orange circle), icon, title, description
-- Hover: Reveal extended description + scale effect
+- Section header: Left or center-aligned, deep navy
+- Grid: 3-4 columns, generous spacing
+- Cards: Minimal design, icon + text, no heavy decorations
+- Hover: Subtle shadow, no scale
+- Number badges: Small, soft colors, not overwhelming
 
 ### Case Studies
-- Alternating background (light gray)
-- 3-column layout with company initial/logo placeholder
-- Metrics: Large Inter numbers in orange
-- Description: Short success story text
+- Off-white or light gray background
+- 2-3 column layout with ample spacing
+- Minimal card design
+- Metrics: Medium-sized numbers in soft orange
+- Description: Clean typography, good line height
+- Company info: Subtle, not dominant
 
 ### Pricing Section
-- White background with centered pricing table
-- Key prices: Large orange numbers
-- Options list: Checkmarks with descriptions
-- CTA: "Get Quote" button below pricing
+- White background
+- Clean table or card layout
+- Prices: Orange for key numbers, not too large
+- Features: Simple checkmarks, good spacing
+- CTA: Orange button below pricing
 
 ### Contact Form Section
-- Navy background (matching hero)
-- White form container with shadow-2xl
+- White or off-white background
+- Form: White container, subtle shadow
 - Orange submit button
-- Success message: Modal or inline confirmation
+- Clean, minimal styling
+- Success message: Inline, subtle
 
 ### Footer
-- Dark navy background
-- White text with reduced opacity for secondary info
-- Company details: Left-aligned
-- Copyright: Center or right-aligned
+- Off-white or light gray background
+- Dark gray text (not black)
+- Simple layout, good spacing
+- Copyright: Small, lighter gray
 
 ## Images
 
 ### Hero Image
-**Large hero background image**: Professional Japanese business setting - modern office with team collaboration or confident business person. Should convey trust and professionalism. Apply 40% navy overlay for text readability.
+Minimal usage - if used, apply very subtle overlay (20-30% opacity) for text readability. Prefer clean white background with strong typography.
 
-### Service Icons
-Use icon library (Heroicons or similar) for:
-- Document/list icon (リスト作成)
-- Pencil/edit icon (スクリプト設計)  
-- Phone icon (架電実施)
-- Chart/analytics icon (成果報告)
+### Icons
+- Line icons from lucide-react
+- Soft navy or medium gray color
+- 40-48px size
+- Minimal, not decorative
 
 ### Decorative Elements
-- Abstract geometric patterns in orange (10% opacity) as background accents in alternating sections
-- Subtle grid pattern overlay on navy sections
+- Avoid heavy patterns
+- Subtle geometric shapes if needed (5-10% opacity)
+- Generous whitespace is the primary design element
 
 ## Animations & Interactions
 
 ### Scroll Animations
-- Fade-in-up on section entry (stagger child elements by 100ms)
-- Counter animations for metrics (count up to final number)
-- Progress bars for statistics (animate width on view)
+- Subtle fade-in only (no slide-up)
+- Smooth, gentle transitions (300-400ms)
+- Minimal movement
 
 ### Hover States
-- Buttons: Background darken + scale-105
-- Cards: Shadow increase + lift (-translate-y-1)
-- Links: Orange underline slide-in effect
+- Buttons: Brightness adjustment, no scale
+- Cards: Very subtle shadow increase
+- Links: Simple underline or color change
+- All transitions: 200-300ms ease
 
 ### Smooth Behaviors
-- Smooth scroll to form on CTA clicks
-- Accordion expand/collapse (300ms ease-in-out)
-- Mobile menu slide-in (transform translateX)
+- Smooth scroll to form sections
+- Gentle accordion expand/collapse
+- Minimal, purposeful animations
 
 ## Responsive Breakpoints
-- Mobile: < 768px (single column, stacked layout)
+- Mobile: < 768px (single column, generous spacing maintained)
 - Tablet: 768px - 1024px (2 columns where applicable)
-- Desktop: > 1024px (full multi-column layouts)
+- Desktop: > 1024px (3-4 columns maximum)
 
 ## Accessibility & Quality
-- Color contrast ratio: Minimum 4.5:1 for body text
-- Focus states: 2px orange outline on all interactive elements
-- Alt text for all images in Japanese
+- Color contrast ratio: Minimum 4.5:1
+- Focus states: 2px soft orange outline
+- Alt text in Japanese
 - ARIA labels for icon-only buttons
-- Form validation with clear error messages in Japanese
+- Clear, friendly error messages
+
+## Key Differences from Previous Design
+1. **More Whitespace**: Doubled spacing throughout
+2. **Softer Colors**: Less saturated navy and orange
+3. **Minimal Decorations**: Focus on content, not visual effects
+4. **Subtle Interactions**: No aggressive animations or hover effects
+5. **Clean Typography**: Content-first approach
+6. **Professional Simplicity**: Elegant without being flashy

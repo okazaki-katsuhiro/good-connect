@@ -71,35 +71,34 @@ const strengths = [
 
 export function StrengthsSection() {
   return (
-    <section id="strengths" className="py-16 md:py-24 bg-background">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="text-center mb-12 md:mb-16">
-          <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-foreground mb-6">
+    <section id="strengths" className="py-20 md:py-32 bg-background">
+      <div className="max-w-7xl mx-auto px-6 sm:px-8 lg:px-12">
+        <div className="text-center mb-16 md:mb-20">
+          <h2 className="text-3xl sm:text-4xl md:text-5xl font-semibold text-foreground mb-6 tracking-tight">
             選ばれる8つの理由
           </h2>
-          <div className="w-24 h-1 bg-orange mx-auto" />
         </div>
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 md:gap-8">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 md:gap-12">
           {strengths.map((strength, index) => (
             <Card
               key={index}
-              className="p-6 md:p-8 hover:shadow-xl transition-all duration-300 hover:-translate-y-2 border-card-border group"
+              className="p-8 md:p-10 hover:shadow-md transition-all duration-200 border-card-border group"
               data-testid={`card-strength-${index}`}
             >
               <div className="relative">
-                <div className="flex items-start justify-between mb-4">
-                  <div className="w-12 h-12 rounded-full bg-orange/10 flex items-center justify-center group-hover:bg-orange/20 transition-colors">
-                    <strength.icon className="w-6 h-6 text-orange" />
+                <div className="flex items-start justify-between mb-6">
+                  <div className="w-11 h-11 rounded-full bg-orange/10 flex items-center justify-center">
+                    <strength.icon className="w-5 h-5 text-orange" strokeWidth={1.5} />
                   </div>
-                  <span className="text-4xl font-bold text-orange/20">
+                  <span className="text-3xl font-semibold text-orange/15">
                     {strength.number}
                   </span>
                 </div>
-                <h3 className="text-lg md:text-xl font-bold text-foreground mb-3">
+                <h3 className="text-base md:text-lg font-semibold text-foreground mb-4">
                   {strength.title}
                 </h3>
-                <p className="text-sm md:text-base text-muted-foreground leading-relaxed">
+                <p className="text-sm text-muted-foreground leading-relaxed">
                   {strength.description}
                 </p>
               </div>
