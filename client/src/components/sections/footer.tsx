@@ -1,7 +1,20 @@
+import footerBg from "@assets/stock_images/dark_city_skyline_bu_565e70b9.jpg";
+
 export function Footer() {
   return (
-    <footer className="bg-primary text-white py-12 md:py-16">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <footer className="relative bg-primary text-white py-12 md:py-16 overflow-hidden">
+      {/* Background Image */}
+      <div className="absolute inset-0 z-0">
+        <img
+          src={footerBg}
+          alt="City skyline"
+          className="w-full h-full object-cover opacity-20"
+        />
+        <div className="absolute inset-0 bg-gradient-to-t from-primary via-primary/95 to-primary/90" />
+      </div>
+
+      {/* Content */}
+      <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-8">
           <div>
             <h3 className="text-2xl font-bold mb-4">GOOD CONNECT</h3>
