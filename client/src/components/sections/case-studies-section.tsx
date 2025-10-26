@@ -1,9 +1,11 @@
 import { Card } from "@/components/ui/card";
-import { TrendingUp, Award, Users } from "lucide-react";
+import growthImage from "@assets/stock_images/business_growth_upwa_568e2e14.jpg";
+import handshakeImage from "@assets/stock_images/business_handshake_d_bed686d8.jpg";
+import collaborationImage from "@assets/stock_images/business_people_work_974db034.jpg";
 
 const caseStudies = [
   {
-    icon: TrendingUp,
+    image: growthImage,
     company: "A社",
     industry: "IT・Web業界",
     result: "商談率120％UP",
@@ -11,7 +13,7 @@ const caseStudies = [
     metrics: "架電1,200件 → 商談84件獲得",
   },
   {
-    icon: Award,
+    image: handshakeImage,
     company: "B社",
     industry: "コンサルティング業界",
     result: "新規契約5件獲得",
@@ -19,7 +21,7 @@ const caseStudies = [
     metrics: "架電800件 → 新規契約5件（契約率0.6%）",
   },
   {
-    icon: Users,
+    image: collaborationImage,
     company: "C社",
     industry: "製造業",
     result: "反応率2倍",
@@ -45,12 +47,16 @@ export function CaseStudiesSection() {
           {caseStudies.map((study, index) => (
             <Card
               key={index}
-              className="p-8 md:p-10 hover:shadow-md transition-all duration-200 border-card-border"
+              className="p-8 md:p-10 hover:shadow-md transition-all duration-200 border-card-border overflow-hidden"
               data-testid={`card-case-${index}`}
             >
               <div className="flex flex-col h-full">
-                <div className="w-14 h-14 rounded-full bg-orange/10 flex items-center justify-center mb-6">
-                  <study.icon className="w-7 h-7 text-orange" strokeWidth={1.5} />
+                <div className="w-20 h-20 rounded-full overflow-hidden mb-6 ring-2 ring-orange/20 flex-shrink-0">
+                  <img
+                    src={study.image}
+                    alt={`${study.company}の事例`}
+                    className="w-full h-full object-cover rounded-full"
+                  />
                 </div>
                 
                 <div className="mb-6">

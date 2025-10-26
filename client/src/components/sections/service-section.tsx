@@ -1,24 +1,27 @@
-import { FileText, Edit, Phone, BarChart3 } from "lucide-react";
 import { Card } from "@/components/ui/card";
+import listImage from "@assets/stock_images/business_documents_c_40b17afb.jpg";
+import scriptImage from "@assets/stock_images/business_writing_pla_2b9ba924.jpg";
+import phoneImage from "@assets/stock_images/business_phone_call__62a2c3f0.jpg";
+import analyticsImage from "@assets/stock_images/business_analytics_c_96f9a1f4.jpg";
 
 const services = [
   {
-    icon: FileText,
+    image: listImage,
     title: "リスト作成",
     description: "ターゲット企業の詳細なリスト作成を代行。業種・地域など自由に指定可能です。",
   },
   {
-    icon: Edit,
+    image: scriptImage,
     title: "スクリプト設計",
     description: "成果につながる攻めのトークスクリプトを設計。継続的な改善も実施します。",
   },
   {
-    icon: Phone,
+    image: phoneImage,
     title: "架電実施",
     description: "専任チームによる質の高いテレアポ実施。丁寧かつ効果的なアプローチを実現。",
   },
   {
-    icon: BarChart3,
+    image: analyticsImage,
     title: "成果報告・改善",
     description: "詳細なレポート提供とデータ分析に基づく継続的な改善提案を行います。",
   },
@@ -45,12 +48,16 @@ export function ServiceSection() {
           {services.map((service, index) => (
             <Card
               key={index}
-              className="p-8 md:p-10 hover:shadow-md transition-all duration-200 border-card-border"
+              className="p-8 md:p-10 hover:shadow-md transition-all duration-200 border-card-border overflow-hidden"
               data-testid={`card-service-${index}`}
             >
               <div className="flex flex-col items-center text-center">
-                <div className="w-14 h-14 md:w-16 md:h-16 rounded-full bg-orange/10 flex items-center justify-center mb-6">
-                  <service.icon className="w-7 h-7 md:w-8 md:h-8 text-orange" strokeWidth={1.5} />
+                <div className="w-20 h-20 md:w-24 md:h-24 rounded-full overflow-hidden mb-6 ring-2 ring-orange/20 flex-shrink-0">
+                  <img
+                    src={service.image}
+                    alt={service.title}
+                    className="w-full h-full object-cover rounded-full"
+                  />
                 </div>
                 <h3 className="text-lg md:text-xl font-semibold text-foreground mb-4">
                   {service.title}
