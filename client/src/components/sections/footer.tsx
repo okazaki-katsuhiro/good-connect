@@ -27,7 +27,6 @@ export function Footer() {
           </div>
           
           <div>
-            <h4 className="text-lg font-semibold mb-4">ページリンク</h4>
             <nav className="space-y-2">
               <Link href="/" data-testid="footer-link-home">
                 <span className="block text-white/80 hover:text-orange transition-colors cursor-pointer">
