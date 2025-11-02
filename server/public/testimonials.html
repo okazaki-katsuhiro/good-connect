@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="GOOD CONNECTをご利用いただいたお客様の声 - 多くの企業様に高い成果を実現">
+  <title>お客様の声 | GOOD CONNECT</title>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/css/main.css">
+  <style>
+    .testimonial-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.25rem;
+      padding: 0.25rem 0.75rem;
+      background: var(--color-muted);
+      border-radius: var(--radius-md);
+      font-size: 0.75rem;
+      font-weight: 500;
+    }
+    .testimonial-image-container {
+      position: relative;
+      height: 12rem;
+      overflow: hidden;
+    }
+    .testimonial-image-overlay {
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(to top, rgba(0,0,0,0.6), transparent);
+    }
+  </style>
+</head>
+<body>
+  <header class="header" id="header">
+    <div class="header-container">
+      <a href="/" class="header-logo">GOOD CONNECT</a>
+      <nav class="header-nav" id="desktop-nav">
+        <a href="/">ホーム</a>
+        <a href="/staff.html">スタッフ紹介</a>
+        <a href="/testimonials.html">お客様の声</a>
+        <a href="/column.html">コラム</a>
+        <a href="/company.html">会社概要</a>
+        <button class="btn btn-primary" onclick="location.href='/#contact'">無料相談</button>
+      </nav>
+      <button class="mobile-menu-btn" id="mobile-menu-btn" aria-label="メニュー">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <line x1="3" y1="12" x2="21" y2="12"></line>
+          <line x1="3" y1="6" x2="21" y2="6"></line>
+          <line x1="3" y1="18" x2="21" y2="18"></line>
+        </svg>
+      </button>
+    </div>
+    <nav class="mobile-menu" id="mobile-menu">
+      <a href="/">ホーム</a>
+      <a href="/staff.html">スタッフ紹介</a>
+      <a href="/testimonials.html">お客様の声</a>
+      <a href="/column.html">コラム</a>
+      <a href="/company.html">会社概要</a>
+      <button class="btn btn-primary mobile-cta-btn" onclick="location.href='/#contact'">無料相談</button>
+    </nav>
+  </header>
+
+  <main class="main-offset">
+    <section class="hero-section">
+      <div class="container text-center">
+        <h1 class="hero-title">お客様の声</h1>
+        <p class="hero-subtitle">
+          多くの企業様にご利用いただき、高い成果を実現しています
+        </p>
+      </div>
+    </section>
+
+    <section class="section bg-white">
+      <div class="container">
+        <div class="grid grid-cols-2 gap-8">
+          <!-- Testimonial 1: IT業 S社 -->
+          <div class="card">
+            <div class="testimonial-image-container">
+              <img src="/assets/images/business_people_hand_3af9cce1.jpg" alt="IT業　株式会社S社" style="width: 100%; height: 100%; object-fit: cover;">
+              <div class="testimonial-image-overlay"></div>
+            </div>
+            <div class="p-8">
+              <h3 class="case-company mb-4">IT業　株式会社S社</h3>
+              <div class="testimonial-stats">
+                <div>
+                  <p class="text-sm text-muted mb-4" style="margin-bottom: 0.25rem;">月間架電数</p>
+                  <p class="testimonial-stat-value">2,500件</p>
+                </div>
+                <div>
+                  <p class="text-sm text-muted mb-4" style="margin-bottom: 0.25rem;">依頼前→依頼後</p>
+                  <p class="text-lg font-bold">0.6% → <span class="text-orange">1.7%</span></p>
+                </div>
+              </div>
+              <div class="flex gap-4 mb-4" style="flex-wrap: wrap; gap: 0.5rem;">
+                <span class="testimonial-badge">店舗向け予約サービス</span>
+                <span class="testimonial-badge">2022年5月～</span>
+              </div>
+              <div class="testimonial-comment">
+                <p>東京都23区へ地域を絞り、見込み客のアポ獲得を依頼しています。架電数での課金のため予算設定も行い易く助かっています。リスト準備をしてもらえるのはリソース不足の弊社に助かっています。初回ヒアリング時に補助金を利用したスキームの提案を行って貰いました。架電開始前に何度か打ち合わせをしていただき、安心でした。ありがとうございます。</p>
+              </div>
+              <p class="text-sm text-muted mt-4">※業界平均アポ率1%</p>
+            </div>
+          </div>
+
+          <!-- Testimonial 2: 不動産業 C社 -->
+          <div class="card">
+            <div class="testimonial-image-container">
+              <img src="/assets/images/business_people_hand_89171b58.jpg" alt="不動産業　一般社団法人C" style="width: 100%; height: 100%; object-fit: cover;">
+              <div class="testimonial-image-overlay"></div>
+            </div>
+            <div style="padding: 2rem;">
+              <h3 class="case-company mb-4">不動産業　一般社団法人C</h3>
+              <div class="grid grid-cols-2 gap-4 mb-4">
+                <div>
+                  <p style="font-size: 0.875rem; color: var(--color-muted-foreground); margin-bottom: 0.25rem;">月間架電数</p>
+                  <p style="font-size: 1.5rem; font-weight: 700; color: var(--color-orange);">1,500件</p>
+                </div>
+                <div>
+                  <p style="font-size: 0.875rem; color: var(--color-muted-foreground); margin-bottom: 0.25rem;">依頼前→依頼後</p>
+                  <p style="font-size: 1.125rem; font-weight: 700;">新規事業 → <span style="color: var(--color-orange);">2.1%</span></p>
+                </div>
+              </div>
+              <div style="display: flex; flex-wrap: wrap; gap: 0.5rem; margin-bottom: 1rem;">
+                <span class="testimonial-badge">リフォーム業向けサービス</span>
+                <span class="testimonial-badge">2024年7月～</span>
+              </div>
+              <div style="background: var(--color-muted); padding: 1rem; border-radius: var(--radius-md);">
+                <p style="line-height: 1.8;">郵送物の送付先となる住所獲得＋提案のアポを依頼しました。新規取引先への資料請求を獲得して、その後資料送付先企業に対してアポ獲得まで一気通貫で行っていただきました。 何社か見積を取りましたが、1番リーズナブルな価格だったため契約をしました。スクリプトのクオリティーも大満足でした。月1回の打ち合わせで状況共有頂けるのも高評価です。</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Testimonial 3: 人材派遣業 B社 -->
+          <div class="card">
+            <div class="testimonial-image-container">
+              <img src="/assets/images/business_people_hand_0b275456.jpg" alt="人材派遣業　株式会社B" style="width: 100%; height: 100%; object-fit: cover;">
+              <div class="testimonial-image-overlay"></div>
+            </div>
+            <div style="padding: 2rem;">
+              <h3 class="case-company mb-4">人材派遣業　株式会社B</h3>
+              <div class="grid grid-cols-2 gap-4 mb-4">
+                <div>
+                  <p style="font-size: 0.875rem; color: var(--color-muted-foreground); margin-bottom: 0.25rem;">月間架電数</p>
+                  <p style="font-size: 1.5rem; font-weight: 700; color: var(--color-orange);">1,000件</p>
+                </div>
+                <div>
+                  <p style="font-size: 0.875rem; color: var(--color-muted-foreground); margin-bottom: 0.25rem;">依頼前→依頼後</p>
+                  <p style="font-size: 1.125rem; font-weight: 700;">1.5% → <span style="color: var(--color-orange);">3.8%</span></p>
+                </div>
+              </div>
+              <div style="display: flex; flex-wrap: wrap; gap: 0.5rem; margin-bottom: 1rem;">
+                <span class="testimonial-badge">ホテル業向けサービス</span>
+                <span class="testimonial-badge">2024年8月～</span>
+              </div>
+              <div style="background: var(--color-muted); padding: 1rem; border-radius: var(--radius-md);">
+                <p style="line-height: 1.8;">インバウンドが増えているエリアのホテル業に向けて、アウトソーシング(清掃業務)の提案を架電していただきました。アポの確度が高く、アポからの受注は50％を超えましたので費用対効果抜群でした。また架電している状況がリアルタイムで分かる部分が良いと思います。これからもホテル業の繁忙期を外して、利用させて頂きます。</p>
+              </div>
+              <p style="font-size: 0.875rem; color: var(--color-muted-foreground); margin-top: 1rem;">※業界平均アポ率1.5%</p>
+            </div>
+          </div>
+
+          <!-- Testimonial 4: SaaS開発業 O社 -->
+          <div class="card">
+            <div class="testimonial-image-container">
+              <img src="/assets/images/business_people_hand_ff2d176d.jpg" alt="SaaS開発業　株式会社O" style="width: 100%; height: 100%; object-fit: cover;">
+              <div class="testimonial-image-overlay"></div>
+            </div>
+            <div style="padding: 2rem;">
+              <h3 class="case-company mb-4">SaaS開発業　株式会社O</h3>
+              <div class="grid grid-cols-2 gap-4 mb-4">
+                <div>
+                  <p style="font-size: 0.875rem; color: var(--color-muted-foreground); margin-bottom: 0.25rem;">月間架電数</p>
+                  <p style="font-size: 1.5rem; font-weight: 700; color: var(--color-orange);">3,000件</p>
+                </div>
+                <div>
+                  <p style="font-size: 0.875rem; color: var(--color-muted-foreground); margin-bottom: 0.25rem;">依頼前→依頼後</p>
+                  <p style="font-size: 1.125rem; font-weight: 700;">0.7% → <span style="color: var(--color-orange);">1.6%</span></p>
+                </div>
+              </div>
+              <div style="display: flex; flex-wrap: wrap; gap: 0.5rem; margin-bottom: 1rem;">
+                <span class="testimonial-badge">中小企業向け業務効率化ツール</span>
+                <span class="testimonial-badge">2024年9月～</span>
+              </div>
+              <div style="background: var(--color-muted); padding: 1rem; border-radius: var(--radius-md);">
+                <p style="line-height: 1.8;">ITリテラシーにばらつきのある中小企業への架電は難易度が高いと感じていましたが、トーク設計から丁寧に対応していただき、質の高いアポイントを安定して獲得できました。商談化率も高く、営業チームの動きが格段に効率化されました。日々の進捗も共有してもらえるので、安心して任せられる点も大きな魅力です。</p>
+              </div>
+              <p style="font-size: 0.875rem; color: var(--color-muted-foreground); margin-top: 1rem;">※業界平均アポ率1.1%</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section bg-muted">
+      <div class="container-narrow text-center">
+        <h2 class="text-3xl font-bold text-primary mb-6">
+          グッドコネクトのテレアポ代行により新規顧客を発掘し、<br class="hidden md:block">
+          クオリティの高いアポイントをご提供することで<br class="hidden md:block">
+          新規顧客獲得を支援いたします
+        </h2>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-bg">
+      <img src="/assets/images/modern_office_buildi_9a422421.jpg" alt="City skyline">
+    </div>
+    <div class="footer-overlay"></div>
+    <div class="footer-content">
+      <div class="container">
+        <div class="footer-grid">
+          <div>
+            <h3 class="footer-brand">GOOD CONNECT</h3>
+            <p class="footer-description">テレアポ代行・営業支援サービス<br>成果につながる伴走型支援を提供します</p>
+          </div>
+          <nav class="footer-nav">
+            <a href="/">ホーム</a>
+            <a href="/staff.html">スタッフ紹介</a>
+            <a href="/testimonials.html">お客様の声</a>
+            <a href="/column.html">コラム</a>
+            <a href="/company.html">会社概要</a>
+          </nav>
+          <div>
+            <h4 class="footer-heading">会社情報</h4>
+            <div class="footer-info">
+              <p>株式会社GOLVOYA</p>
+              <p>〒141-0022</p>
+              <p>東京都品川区東五反田4-10-9 シャトレー五反田8F</p>
+              <p>TEL: <a href="tel:03-6823-4827">03-6823-4827</a>（代表）</p>
+            </div>
+          </div>
+        </div>
+        <div class="footer-bottom">
+          <p class="footer-copyright">© 2025 GOOD CONNECT All Rights Reserved.</p>
+        </div>
+      </div>
+    </div>
+  </footer>
+  <script src="/js/site.js"></script>
+</body>
+</html>
